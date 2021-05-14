@@ -11,10 +11,11 @@ class record {
     public $Description;
     public $customernumber;
     public $saleamount;
+    public $email;
     
 
 
-    public function __construct($transactionnum,$date,$productnumber,$description,$customernumber,$saleamount)
+    public function __construct($transactionnum,$date,$productnumber,$description,$customernumber,$saleamount,$email)
     {
         $this->transactionnum =$transactionnum;
         $this->date = $date;
@@ -22,6 +23,7 @@ class record {
         $this->description = $description;
         $this->customernumber = $customernumber;
         $this->saleamount = $saleamount;
+        $this->email = $email;
     
     }
 
@@ -54,6 +56,12 @@ class record {
     {
         return $this->saleamount;
     }
+
+     public function get_email()
+    {
+        return $this->email;
+    }
+
 }
 
 
@@ -62,10 +70,10 @@ class recordDTO extends record {
 
     public function displayrecord($idSALESRECORD)
     {
-        $servername = "35.184.171.26";
-        $user = "root";
-        $pass = "1234";
-        $dbname = "PeoplesHealthPharmacy";
+         $servername = "localhost";
+        $user = "id16814382_root";
+        $pass = "6r!TYM8NT(BA7Ep";
+        $dbname = "id16814382_peopleshealthpharmacy";
 
         $tablename = "SALESRECORD";
 
@@ -86,18 +94,19 @@ class recordDTO extends record {
         $description_hold = $holder["description"];
         $customernumber_hold = $holder["customernumber"];
         $saleamount_hold = $holder["saleamount"];
+        $email_hold = $holder["email"];
 
-        $info_holder = array($ID_hold,$transactionnum_hold,$date_hold,$productnumber_hold,$description_hold,$customernumber_hold,$saleamount_hold);
+        $info_holder = array($ID_hold,$transactionnum_hold,$date_hold,$productnumber_hold,$description_hold,$customernumber_hold,$saleamount_hold,$email_hold);
 
         return $info_holder;
     }
 
     public function displayall()
     {
-        $servername = "35.184.171.26";
-        $user = "root";
-        $pass = "1234";
-        $dbname = "PeoplesHealthPharmacy";
+         $servername = "localhost";
+        $user = "id16814382_root";
+        $pass = "6r!TYM8NT(BA7Ep";
+        $dbname = "id16814382_peopleshealthpharmacy";
 
         $tablename = "SALESRECORD";
 
@@ -123,6 +132,7 @@ class recordDTO extends record {
                 $description_hold[$x] = $holder["description"];
                 $customernumber_hold[$x] = $holder["customernumber"];
                 $saleamount_hold[$x] = $holder["saleamount"];
+                $email_hold = $holder["email"];
 
                 $x++;
             }
@@ -132,17 +142,17 @@ class recordDTO extends record {
             return false;
         }
 
-        $info_holder = array($ID_hold,$transactionnum_hold,$date_hold,$productnumber_hold,$description_hold,$customernumber_hold,$saleamount_hold);
+        $info_holder = array($ID_hold,$transactionnum_hold,$date_hold,$productnumber_hold,$description_hold,$customernumber_hold,$saleamount_hold,$email_hold);
 
         return $info_holder;
     }
 
     public function addrecord()
     {
-        $servername = "35.184.171.26";
-        $user = "root";
-        $pass = "1234";
-        $dbname = "PeoplesHealthPharmacy";
+         $servername = "localhost";
+        $user = "id16814382_root";
+        $pass = "6r!TYM8NT(BA7Ep";
+        $dbname = "id16814382_peopleshealthpharmacy";
 
         $tablename = "SALESRECORD";
 
@@ -156,9 +166,10 @@ class recordDTO extends record {
         $description_temp = $this->get_description();
         $customernumber_temp = $this->get_customernumber();
         $saleamount_temp = $this->get_saleamount();
+        $email_temp = $this->get_email();
 
 
-        $sql = "INSERT INTO $tablename (`transactionnum`, `date`, `productnumber`, `description`, `customernumber`, `saleamount`) VALUES ('$transactionnum_temp', '$date_temp', '$productnumber_temp', '$description_temp', '$customernumber_temp', '$saleamount_temp');";
+        $sql = "INSERT INTO $tablename (`transactionnum`, `date`, `productnumber`, `description`, `customernumber`, `saleamount`, `email`) VALUES ('$transactionnum_temp', '$date_temp', '$productnumber_temp', '$description_temp', '$customernumber_temp', '$saleamount_temp', '$email_temp');";
         $result = mysqli_query($conn, $sql);
         if(!$result)
         {
@@ -170,22 +181,15 @@ class recordDTO extends record {
 
     public function deleterecord($idSALESRECORD)
     {
-        $servername = "35.184.171.26";
-        $user = "root";
-        $pass = "1234";
-        $dbname = "PeoplesHealthPharmacy";
+        $servername = "localhost";
+        $user = "id16814382_root";
+        $pass = "6r!TYM8NT(BA7Ep";
+        $dbname = "id16814382_peopleshealthpharmacy";
 
         $tablename = "SALESRECORD";
 
 
         $conn = mysqli_connect($servername,$user,$pass,$dbname);
-
-        $transactionnum_temp = $this->get_transactionnum();
-        $date_temp = $this->get_date();
-        $productnumber_temp = $this->get_productnumber();
-        $description_temp = $this->get_description();
-        $customernumber_temp = $this->get_customernumber();
-        $saleamount_temp = $this->get_saleamount();
 
         $sql = "DELETE FROM $tablename WHERE idSALESRECORD='$idSALESRECORD';";
         $result = mysqli_query($conn, $sql);
@@ -198,10 +202,10 @@ class recordDTO extends record {
 
     public function updaterecord($idSALESRECORD)
     {
-        $servername = "35.184.171.26";
-        $user = "root";
-        $pass = "1234";
-        $dbname = "PeoplesHealthPharmacy";
+        $servername = "localhost";
+        $user = "id16814382_root";
+        $pass = "6r!TYM8NT(BA7Ep";
+        $dbname = "id16814382_peopleshealthpharmacy";
 
         $tablename = "SALESRECORD";
 
@@ -214,8 +218,9 @@ class recordDTO extends record {
         $description_temp = $this->get_description();
         $customernumber_temp = $this->get_customernumber();
         $saleamount_temp = $this->get_saleamount();
+        $email_temp = $this->get_email();
 
-        $sql = "UPDATE $tablename SET transactionnum='$transactionnum_temp', date='$date_temp', productnumber='$productnumber_temp', description='$description_temp', customernumber='$customernumber_temp', saleamount='$saleamount_temp' WHERE idSALESRECORD='$idSALESRECORD';";
+        $sql = "UPDATE $tablename SET transactionnum='$transactionnum_temp', date='$date_temp', productnumber='$productnumber_temp', description='$description_temp', customernumber='$customernumber_temp', saleamount='$saleamount_temp', email='$email_temp' WHERE idSALESRECORD='$idSALESRECORD';";
         $result = mysqli_query($conn, $sql);
         if(!$result)
         {
