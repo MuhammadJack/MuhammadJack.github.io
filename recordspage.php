@@ -25,7 +25,7 @@ table, th, td {
             echo "<h1> Welcome $username </h1>";
            if($_SESSION['admin_check'] == "true")
             {
-                echo "<button float: right; type=\"button\" onclick=\"location.href='adminpage.php'\">Admin Page</button>";
+                echo "<button style=\"float: right;\" type=\"button\" onclick=\"location.href='adminpage.php'\">Admin Page</button>";
             }
         }
         else
