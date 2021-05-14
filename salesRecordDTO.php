@@ -12,7 +12,7 @@ class record {
     public $customernumber;
     public $saleamount;
     public $email;
-    
+
 
 
     public function __construct($transactionnum,$date,$productnumber,$description,$customernumber,$saleamount,$email)
@@ -24,7 +24,7 @@ class record {
         $this->customernumber = $customernumber;
         $this->saleamount = $saleamount;
         $this->email = $email;
-    
+
     }
 
     public function get_transactionnum()
@@ -132,7 +132,7 @@ class recordDTO extends record {
                 $description_hold[$x] = $holder["description"];
                 $customernumber_hold[$x] = $holder["customernumber"];
                 $saleamount_hold[$x] = $holder["saleamount"];
-                $email_hold = $holder["email"];
+                $email_hold[$x] = $holder["email"];
 
                 $x++;
             }
@@ -232,7 +232,7 @@ class recordDTO extends record {
 
     public function makecsv()
     {
-        
+
     }
 
 }
