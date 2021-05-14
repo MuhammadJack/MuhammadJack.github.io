@@ -55,6 +55,6 @@ table, th, td {
         <br />
         <input type="radio" name="month" value="12" required />December
     </form>
-
+    <button type="button" onclick="location.href='adminpage.php'">Go back</button>
 </body>
 </html>
