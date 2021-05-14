@@ -74,7 +74,7 @@ table, th, td {
     </tr>
     <?php
         require_once 'salesRecordDTO.php';
-        $recorddto = new recordDTO(null,null,null,null,null,null);
+        $recorddto = new recordDTO(null,null,null,null,null,null,null);
         $info_holder = $recorddto->displayall();
 
         $ID_array = $info_holder[0];

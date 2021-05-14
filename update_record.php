@@ -26,7 +26,7 @@ session_start();
     $user_ID = $_GET['Record_ID'];
 
     require_once 'salesRecordDTO.php';
-    $recorddto = new recordDTO(null,null,null,null,null,null);
+    $recorddto = new recordDTO(null,null,null,null,null,null,null);
     $array = $recorddto->displayrecord($user_ID);
 
 
@@ -42,19 +42,20 @@ echo "
     <lable>Date :</lable>
     <input type=\"text\" name=\"date\" value=\"$array[2]\" required/>
     <br>
-    <lable>productnumber :</lable>
+    <lable>product number :</lable>
     <input type=\"text\" name=\"productnumber\" value=\"$array[3]\" required/>
     <br>
     <lable>description :</lable>
     <input type=\"text\" name=\"description\" value=\"$array[4]\" required/>
     <br>
-    <lable>customernumber :</lable>
+    <lable>customer number :</lable>
     <input type=\"text\" name=\"customernumber\" value=\"$array[5]\" required/>
     <br>
-    <lable>saleamount :</lable>
+    <lable>sale amount :</lable>
     <input type=\"text\" name=\"saleamount\" value=\"$array[6]\" required/>
     <br>
-    <input type=\"text\" name=\"email\" value=\"$array[7]\" required/>
+    <lable>Email :</lable>
+    <input type=\"email\" name=\"email\" value=\"$array[7]\" required/>
     <br>
 
 <button type=\"submit\" name=\"submit2\">Update Record!</button>

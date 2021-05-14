@@ -38,6 +38,7 @@ table, th, td {
                 <th>Description</th>
                 <th>Customer Number</th>
                 <th>Sale Amount</th>
+                <th>Email</th>
             </tr>
 
    <?php
@@ -45,7 +46,7 @@ table, th, td {
    $Record_ID = $_GET['Record_ID'];
 
     require_once 'salesRecordDTO.php';
-    $recorddto = new recordDTO(null,null,null,null,null,null);
+    $recorddto = new recordDTO(null,null,null,null,null,null,null);
     $array = $recorddto->displayrecord($Record_ID);
     
     if(!$array)
@@ -62,6 +63,7 @@ table, th, td {
                 <th>{$array[4]}</th>
                 <th>{$array[5]}</th>
                 <th>{$array[6]}</th>
+                <th>{$array[7]}</th>
             </tr>";
     }
    
