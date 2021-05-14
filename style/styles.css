@@ -87,19 +87,37 @@ label {
   margin-top: 40px;
 }
 
-.submit {
+.submit, .button {
   border: 1px solid #e2e2e5;
   background: #474A59;
   color: #e2e2e5;
   padding: 10px 20px;
-  
 }
 
-.submit:hover,
-.submit:focus {
+.btn2 {
+    width: 45%;
+    margin: auto;
+}
+
+.submit:hover, .submit:focus,
+.button:hover, .button:focus {
   box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
   transform: translateY(-0.5em);
   border: 1px solid #e2e2e5;
   background: #e2e2e5;
   color: #474A59;
 }
+
+.msg {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.sucmsg {
+    margin-top: 50px;
+}
+
+.next-row {
+  margin-top: 15px;
+}
+
