@@ -35,7 +35,7 @@ class userDTO extends User {
     {
         $servername = "localhost";
         $user = "id16814382_root";
-        $pass = "1HdY(F\/kX%&^*sf";
+        $pass = "16r!TYM8NT(BA7Ep";
         $dbname = "id16814382_peopleshealthpharmacy";
 
         $tablename = "USERS";
@@ -68,7 +68,7 @@ class userDTO extends User {
     {
         $servername = "localhost";
         $user = "id16814382_root";
-        $pass = "1HdY(F\/kX%&^*sf";
+        $pass = "6r!TYM8NT(BA7Ep";
         $dbname = "id16814382_peopleshealthpharmacy";
 
         $tablename = "USERS";
@@ -98,7 +98,7 @@ class userDTO extends User {
     {
         $servername = "localhost";
         $user = "id16814382_root";
-        $pass = "1HdY(F\/kX%&^*sf";
+        $pass = "6r!TYM8NT(BA7Ep";
         $dbname = "id16814382_peopleshealthpharmacy";
 
         $tablename = "USERS";
@@ -140,7 +140,7 @@ class userDTO extends User {
     {
         $servername = "localhost";
         $user = "id16814382_root";
-        $pass = "1HdY(F\/kX%&^*sf";
+        $pass = "6r!TYM8NT(BA7Ep";
         $dbname = "id16814382_peopleshealthpharmacy";
 
         $tablename = "USERS";
@@ -166,7 +166,7 @@ class userDTO extends User {
     {
         $servername = "localhost";
         $user = "id16814382_root";
-        $pass = "1HdY(F\/kX%&^*sf";
+        $pass = "6r!TYM8NT(BA7Ep";
         $dbname = "id16814382_peopleshealthpharmacy";
 
         $tablename = "USERS";
@@ -185,10 +185,10 @@ class userDTO extends User {
 
     public function updateuser($idUSERS_temp)
     {
-        $servername = "35.184.171.26";
-        $user = "root";
-        $pass = "1234";
-        $dbname = "PeoplesHealthPharmacy";
+         $servername = "localhost";
+        $user = "id16814382_root";
+        $pass = "6r!TYM8NT(BA7Ep";
+        $dbname = "id16814382_peopleshealthpharmacy";
 
         $tablename = "USERS";
 

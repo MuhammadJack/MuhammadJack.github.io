@@ -70,9 +70,9 @@ class recordDTO extends record {
 
     public function displayrecord($idSALESRECORD)
     {
-        $servername = "localhost";
+         $servername = "localhost";
         $user = "id16814382_root";
-        $pass = "1HdY(F\/kX%&^*sf";
+        $pass = "6r!TYM8NT(BA7Ep";
         $dbname = "id16814382_peopleshealthpharmacy";
 
         $tablename = "SALESRECORD";
@@ -103,9 +103,9 @@ class recordDTO extends record {
 
     public function displayall()
     {
-        $servername = "localhost";
+         $servername = "localhost";
         $user = "id16814382_root";
-        $pass = "1HdY(F\/kX%&^*sf";
+        $pass = "6r!TYM8NT(BA7Ep";
         $dbname = "id16814382_peopleshealthpharmacy";
 
         $tablename = "SALESRECORD";
@@ -149,9 +149,9 @@ class recordDTO extends record {
 
     public function addrecord()
     {
-        $servername = "localhost";
+         $servername = "localhost";
         $user = "id16814382_root";
-        $pass = "1HdY(F\/kX%&^*sf";
+        $pass = "6r!TYM8NT(BA7Ep";
         $dbname = "id16814382_peopleshealthpharmacy";
 
         $tablename = "SALESRECORD";
@@ -181,9 +181,9 @@ class recordDTO extends record {
 
     public function deleterecord($idSALESRECORD)
     {
-       $servername = "localhost";
+        $servername = "localhost";
         $user = "id16814382_root";
-        $pass = "1HdY(F\/kX%&^*sf";
+        $pass = "6r!TYM8NT(BA7Ep";
         $dbname = "id16814382_peopleshealthpharmacy";
 
         $tablename = "SALESRECORD";
@@ -204,7 +204,7 @@ class recordDTO extends record {
     {
         $servername = "localhost";
         $user = "id16814382_root";
-        $pass = "1HdY(F\/kX%&^*sf";
+        $pass = "6r!TYM8NT(BA7Ep";
         $dbname = "id16814382_peopleshealthpharmacy";
 
         $tablename = "SALESRECORD";
