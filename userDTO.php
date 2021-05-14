@@ -55,7 +55,7 @@ class userDTO extends User {
         $username_checker = $holder["username"];
         $password_checker = $holder["password"];
 
-        $bool = false;
+  
         if(($username_temp == $username_checker)and($password_temp == $password_checker))
         {
             return $ID_hold;
