@@ -33,18 +33,19 @@ session_start();
     <lable>Date :</lable>
     <input type="date" name="date" required/>
     <br>
-    <lable>productnumber :</lable>
+    <lable>product number :</lable>
     <input type="text" name="productnumber" required/>
     <br>
     <lable>description :</lable>
     <input type="text" name="description" required/>
     <br>
-    <lable>customernumber :</lable>
+    <lable>customer number :</lable>
     <input type="text" name="customernumber" required/>
     <br>
-    <lable>saleamount :</lable>
+    <lable>sale amount :</lable>
     <input type="text" name="saleamount" required/>
     <br>
+     <lable>Email :</lable>
     <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
     <br>
 

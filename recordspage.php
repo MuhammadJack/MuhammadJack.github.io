@@ -70,6 +70,7 @@ table, th, td {
         <th>Description</th>
         <th>Customer Number</th>
         <th>Sale Amount</th>
+        <th>Email</th>
     </tr>
     <?php
         require_once 'salesRecordDTO.php';
