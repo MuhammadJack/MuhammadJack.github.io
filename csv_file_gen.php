@@ -12,7 +12,7 @@ if(!$bool)
 }
 
 
-echo "<a href=\"\csv_files\file.csv\" download>Download csv file here</a>";
+echo "<a href=\"/csv_files/file.csv\" download>Download csv file here</a>";
 
 
 
