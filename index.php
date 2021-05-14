@@ -1,34 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>WELCOME</title>
-<link rel="stylesheet" href="styles.css">
+	<meta charset="utf-8" />
+    <title>Home</title>
+    <link rel="stylesheet" href="style/styles.css" />
 </head>
 <body>
-<div class="popout">
-<p>
-<span>P</span>
-<span>L</span>
-<span>E</span>
-<span>A</span>
-<span>S</span>
-<span>E</span> 
-<span>     </span>
-<span>L</span>
-<span>O</span>
-<span>G</span>
-<span>I</span>
-<span>N</span>
-</p>
-</div>
-<form action="loginprocess.php" methord="get">
-<lable>User Name: </lable>
-<input type="text" name="username"/>
-<br>
-<lable>Password :</lable>
-<input type="text" name="password"/>
-<button type="submit" name="submit">Login</button>
-</form>
-</div>
+    <div class="page">
+        <div class="container">
+            <div class="left">
+                <img src="/images/medicine.png" alt="logo" style="" />
+                <div class="login">PHP-SRePS</div>
+            </div>
+            
+            <div class="right">
+                <div class="form">
+                    <form action="loginprocess.php" methord="get">
+                        <label>User Name</label>
+                        <input type="text" name="username" class="input-text" />
+                        <label>Password</label>
+                        <input type="text" name="password" class="input-text" />
+                        <div class="button-row"><button type="submit" name="submit" class="submit from-left">Login</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
