@@ -54,7 +54,8 @@ table, th, td {
         <input type="radio" name="month" value="11" required />November
         <br />
         <input type="radio" name="month" value="12" required />December
+        <button type="submit" name="submit2">Sort!</button>
     </form>
-    <button type="button" onclick="location.href='adminpage.php'">Go back</button>
+    <button type="button" onclick="location.href='recordspage.php'">Go back</button>
 </body>
 </html>
