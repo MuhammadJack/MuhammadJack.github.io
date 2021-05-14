@@ -47,6 +47,7 @@ table, th, td {
 
     <div>
     <button type="button" onclick="location.href='addrecord.php'">Click Here to add a Record!</button>
+        <button type="button" onclick="location.href='sort_month_record.php'">Show Monthly Sales Records!</button>
     <form action="search_record_process.php" methord="get">
         <lable>Enter Record ID here :</lable>
         <input type="text" name="Record_ID"/>
@@ -57,7 +58,7 @@ table, th, td {
         or
        <button type="submit" name="update" formaction="update_record.php">Update Record!</button>
         or
-        <button type="submit" name="sortbymonth" formaction="sort_month_record.php">Show Monthly Sales Records!</button>
+        
     </form>
     
     </div>
