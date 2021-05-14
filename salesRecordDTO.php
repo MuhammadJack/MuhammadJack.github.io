@@ -62,10 +62,10 @@ class recordDTO extends record {
 
     public function displayrecord($idSALESRECORD)
     {
-        $servername = "35.184.171.26";
-        $user = "root";
-        $pass = "1234";
-        $dbname = "PeoplesHealthPharmacy";
+        $servername = "localhost";
+        $user = "id16814382_root";
+        $pass = "1HdY(F\/kX%&^*sf";
+        $dbname = "id16814382_peopleshealthpharmacy";
 
         $tablename = "SALESRECORD";
 
@@ -94,10 +94,10 @@ class recordDTO extends record {
 
     public function displayall()
     {
-        $servername = "35.184.171.26";
-        $user = "root";
-        $pass = "1234";
-        $dbname = "PeoplesHealthPharmacy";
+        $servername = "localhost";
+        $user = "id16814382_root";
+        $pass = "1HdY(F\/kX%&^*sf";
+        $dbname = "id16814382_peopleshealthpharmacy";
 
         $tablename = "SALESRECORD";
 
@@ -139,10 +139,10 @@ class recordDTO extends record {
 
     public function addrecord()
     {
-        $servername = "35.184.171.26";
-        $user = "root";
-        $pass = "1234";
-        $dbname = "PeoplesHealthPharmacy";
+        $servername = "localhost";
+        $user = "id16814382_root";
+        $pass = "1HdY(F\/kX%&^*sf";
+        $dbname = "id16814382_peopleshealthpharmacy";
 
         $tablename = "SALESRECORD";
 
@@ -170,10 +170,10 @@ class recordDTO extends record {
 
     public function deleterecord($idSALESRECORD)
     {
-        $servername = "35.184.171.26";
-        $user = "root";
-        $pass = "1234";
-        $dbname = "PeoplesHealthPharmacy";
+       $servername = "localhost";
+        $user = "id16814382_root";
+        $pass = "1HdY(F\/kX%&^*sf";
+        $dbname = "id16814382_peopleshealthpharmacy";
 
         $tablename = "SALESRECORD";
 
@@ -198,10 +198,10 @@ class recordDTO extends record {
 
     public function updaterecord($idSALESRECORD)
     {
-        $servername = "35.184.171.26";
-        $user = "root";
-        $pass = "1234";
-        $dbname = "PeoplesHealthPharmacy";
+        $servername = "localhost";
+        $user = "id16814382_root";
+        $pass = "1HdY(F\/kX%&^*sf";
+        $dbname = "id16814382_peopleshealthpharmacy";
 
         $tablename = "SALESRECORD";
 
