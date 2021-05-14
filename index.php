@@ -2,10 +2,25 @@
 <html>
 <head>
 <title>WELCOME</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div margin: auto; width: 60%; border: 5px solid #FFFF00; padding: 10px;>
-<h1>Please Login</h1>
+<div class="popout">
+<p>
+<span>P</span>
+<span>L</span>
+<span>E</span>
+<span>A</span>
+<span>S</span>
+<span>E</span> 
+<span>     </span>
+<span>L</span>
+<span>O</span>
+<span>G</span>
+<span>I</span>
+<span>N</span>
+</p>
+</div>
 <form action="loginprocess.php" methord="get">
 <lable>User Name: </lable>
 <input type="text" name="username"/>
