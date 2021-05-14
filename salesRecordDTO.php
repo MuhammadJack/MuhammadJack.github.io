@@ -281,11 +281,18 @@ class recordDTO extends record {
     {
         $fp = fopen('\csv_files\file.csv','w');
 
+        if(!$fp)
+        {
+            return false;
+        }
+
         foreach ($recordarray as $fields)
         {
             fputcsv($fp, $fields);
         }
         fclose($fp);
+
+        return true;
     }
 
 
