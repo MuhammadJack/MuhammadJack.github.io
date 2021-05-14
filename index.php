@@ -16,9 +16,9 @@
             <div class="right">
                 <div class="form">
                     <form action="loginprocess.php" method="POST">
-                        <label>User Name</label>
+                        <label class="label">User Name</label>
                         <input type="text" name="username" class="input-text" />
-                        <label>Password</label>
+                        <label class="label">Password</label>
                         <input type="text" name="password" class="input-text" />
                         <div class="button-row"><button type="submit" name="submit" class="submit">Login</button></div>
                     </form>

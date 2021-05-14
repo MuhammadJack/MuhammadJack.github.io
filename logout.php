@@ -13,7 +13,7 @@
     <div class="page">
         <div class="container">
             <div class="left">
-                <img src="/images/medicine.png" alt="logo" style="" />
+                <img src="/images/medicine.png" alt="logo" />
                 <div class="login">PHP-SRePS</div>
             </div>
             
