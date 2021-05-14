@@ -35,7 +35,7 @@ class userDTO extends User {
     {
         $servername = "localhost";
         $user = "id16814382_root";
-        $pass = "16r!TYM8NT(BA7Ep";
+        $pass = "6r!TYM8NT(BA7Ep";
         $dbname = "id16814382_peopleshealthpharmacy";
 
         $tablename = "USERS";
