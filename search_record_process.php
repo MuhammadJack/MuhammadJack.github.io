@@ -32,7 +32,7 @@ table, th, td {
 <table>
             <tr>
                 <th>ID_SALESRECORD</th>
-                <th>Trans Action Number</th>
+                <th>Transaction Number</th>
                 <th>Date</th>
                 <th>Product Number</th>
                 <th>Description</th>

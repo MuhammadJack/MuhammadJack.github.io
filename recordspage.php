@@ -37,9 +37,9 @@ table, th, td {
         
     ?>
     
-
+    <div float: right;>
      <button type="button" onclick="location.href='logout.php'">Logout</button>;
-    
+    </div>
 
 
 
