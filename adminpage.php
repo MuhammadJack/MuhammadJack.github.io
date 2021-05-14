@@ -13,6 +13,11 @@ table, th, td {
 </style>
 </head>
 <body>
+
+    <div style="float: right;">
+        <button type="button" onclick="location.href='logout.php'">Logout</button>
+    </div>
+
     <?php
     
         
@@ -29,10 +34,7 @@ table, th, td {
     }
 ?>
 
-    <div style="float: right;">
-         <button type="button" onclick="location.href='logout.php'">Logout</button>
-    </div>
-    
+   
 
     <div>
     <button type="button" onclick="location.href='adduser.php'">Click Here to add a User!</button>
