@@ -2,7 +2,6 @@
 session_start();
 
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -91,8 +90,8 @@ table, th, td {
         $x = 0;
         foreach($ID_array as $value)
         {
-            echo "<tr>
-
+            echo "
+        <tr>
             <th>{$ID_array[$x]}</th>
             <th>{$transnum_array[$x]}</th>
             <th>{$date_array[$x]}</th>
@@ -101,8 +100,7 @@ table, th, td {
             <th>{$customernumber_array[$x]}</th>
             <th>{$saleamount_array[$x]}</th>
             <th>{$email_array[$x]}</th>
-
-            </tr>";
+        </tr>";
 
             $x++;
         }

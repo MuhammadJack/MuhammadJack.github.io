@@ -4,7 +4,7 @@
 $Record_ID = $_GET['Record_ID'];
 
 require_once 'salesRecordDTO.php';
-$recorddto = new recordDTO(null,null,null,null,null,null);
+$recorddto = new recordDTO(null,null,null,null,null,null,null);
 $bool = $recorddto->deleterecord($Record_ID);
 
 if(!$bool)
