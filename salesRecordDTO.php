@@ -230,6 +230,11 @@ class recordDTO extends record {
         return true;
     }
 
+    public function makecsv()
+    {
+        
+    }
+
 }
 
 ?>
