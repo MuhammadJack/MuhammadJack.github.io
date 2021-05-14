@@ -279,7 +279,7 @@ class recordDTO extends record {
 
     public function make_csv($recordarray)
     {
-        $fp = fopen('csv_files\file.csv','w');
+        $fp = fopen('\csv_files\file.csv','w');
 
         foreach ($recordarray as $fields)
         {
