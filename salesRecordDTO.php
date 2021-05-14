@@ -230,11 +230,52 @@ class recordDTO extends record {
         return true;
     }
 
-    public function makecsv()
+    public function sortbymonth($month)
     {
+        $info_holder = $this->displayall();
 
+        $ID_array = $info_holder[0];
+        $transnum_array = $info_holder[1];
+        $date_array = $info_holder[2];
+        $productnumber_array = $info_holder[3];
+        $description_array = $info_holder[4];
+        $customernumber_array = $info_holder[5];
+        $saleamount_array = $info_holder[6];
+        $email_array = $info_holder[7];
+
+        $x = 0;
+        $y = 0;
+        foreach($ID_array as $value)
+        {
+            if($this->datespliter($date_array[$x]) == $month)
+            {
+            $ID_array_sorted[$y] = $ID_array[$x];
+            $transnum_array_sorted[$y] =  $transnum_array[$x];
+            $date_array_sorted[$y] = $date_array[$x];
+            $productnumber_array_sorted[$y] = $productnumber_array[$x];
+            $description_array_sorted[$y] = $description_array[$x];
+            $customernumber_array_sorted[$y] = $customernumber_array[$x];
+            $saleamount_array_sorted[$y] = $saleamount_array[$x];
+            $email_array_sorted[$y] = $email_array[$x];
+            $y++;
+            }
+
+            $x++;
+        }
+
+        $recordarray = array($ID_array_sorted,$transnum_array_sorted,$date_array_sorted,$productnumber_array_sorted,$description_array_sorted,$customernumber_array_sorted,$saleamount_array_sorted,$email_array_sorted);
+        return $recordarray;
     }
 
+    public function datespliter($date)
+    {
+        $str = $date;
+
+        $arr2 = str_split($str, 5);
+        $arr3 = str_split($arr2[1], 2);
+
+        return $arr3[0];
+    }
 }
 
 ?>

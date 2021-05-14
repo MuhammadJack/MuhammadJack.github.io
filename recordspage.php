@@ -56,6 +56,8 @@ table, th, td {
         <button type="submit" name="delete" formaction="delete_record_process.php">Delete Record!</button>
         or
        <button type="submit" name="update" formaction="update_record.php">Update Record!</button>
+        or
+        <button type="submit" name="sortbymonth" formaction="sort_month_record.php">Show Monthly Sales Records!</button>
     </form>
     
     </div>
