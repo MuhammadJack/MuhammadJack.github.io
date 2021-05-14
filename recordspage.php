@@ -83,6 +83,7 @@ table, th, td {
         $description_array = $info_holder[4];
         $customernumber_array = $info_holder[5];
         $saleamount_array = $info_holder[6];
+        $email_array = $info_holder[7];
         
 
 
@@ -98,6 +99,7 @@ table, th, td {
             <th>{$description_array[$x]}</th>
             <th>{$customernumber_array[$x]}</th>
             <th>{$saleamount_array[$x]}</th>
+            <th>{$email_array[$x]}</th>
 
             </tr>";
 

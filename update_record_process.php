@@ -11,12 +11,13 @@ $productnumber = $_GET['productnumber'];
 $description = $_GET['description'];
 $customernumber = $_GET['customernumber'];
 $saleamount = $_GET['saleamount'];
+$email = $_GET['email'];
 
 
 
 
 require_once 'salesRecordDTO.php';
-$recorddto = new recordDTO($transactionnum,$date,$productnumber,$description,$customernumber,$saleamount);
+$recorddto = new recordDTO($transactionnum,$date,$productnumber,$description,$customernumber,$saleamount,$email);
 $bool = $recorddto->updaterecord($ID);
 
 if(!$bool)

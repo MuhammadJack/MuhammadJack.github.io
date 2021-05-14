@@ -31,7 +31,7 @@ session_start();
     <input type="text" name="transactionnum" required/>
     <br>
     <lable>Date :</lable>
-    <input type="text" name="date" required/>
+    <input type="date" name="date" required/>
     <br>
     <lable>productnumber :</lable>
     <input type="text" name="productnumber" required/>
@@ -44,6 +44,8 @@ session_start();
     <br>
     <lable>saleamount :</lable>
     <input type="text" name="saleamount" required/>
+    <br>
+    <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
     <br>
 
 

@@ -54,6 +54,8 @@ echo "
     <lable>saleamount :</lable>
     <input type=\"text\" name=\"saleamount\" value=\"$array[6]\" required/>
     <br>
+    <input type=\"text\" name=\"email\" value=\"$array[7]\" required/>
+    <br>
 
 <button type=\"submit\" name=\"submit2\">Update Record!</button>
     </form>
