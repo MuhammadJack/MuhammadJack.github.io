@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>WELCOME</title>
-</head>
-<body>
 <?php
 session_start();
+?>
+<!DOCTYPE html>
+<html>
+<body>
+<?php
 
 $username = $_GET['username'];
 $password = $_GET['password'];
@@ -23,14 +22,17 @@ $_SESSION['admin_check'] = $user[3];
 
 if(!$ID)
 {
-    header('Location: index.php');
+    echo "invalid username or password";
+    echo "<button type=\"button\" onclick=\"location.href='index.php'\">Go Back!</button>";
 }
 else
 {
-   header('Location: recordspage.php');  
-}
 
+    echo "
+    <h1>You are now logged in</h1>
+    <button type=\"button\" onclick=\"location.href='recordspage.php'\">Access Records</button>
+    ";
+}
 ?>
-<button type="button" onclick="location.href='index.php'">Go Back!</button>
 </body>
 </html>
