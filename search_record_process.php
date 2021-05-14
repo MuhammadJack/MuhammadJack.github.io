@@ -29,7 +29,7 @@ table, th, td {
     }
 ?>
 
-<table style="width:100%" >
+<table>
             <tr>
                 <th>ID_SALESRECORD</th>
                 <th>Trans Action Number</th>
