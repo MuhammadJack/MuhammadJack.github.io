@@ -23,10 +23,15 @@ table, th, td {
         {
            $username = $_SESSION['user_name'];
 
-            echo "<h1 style=\"float: left;\"> Welcome $username </h1>";
+
            if($_SESSION['admin_check'] == "true")
             {
-                echo "<button type=\"button\" onclick=\"location.href='adminpage.php'\">Admin Page</button>";
+                echo "<button type=\"button\" onclick=\"location.href='adminpage.php'\">Admin Page</button>
+                             <button type=\"button\" onclick=\"location.href='logout.php'\">Logout</button>
+                        </div>
+                    <h1> Welcome $username </h1>
+                    
+";
             }
         }
         else
@@ -34,15 +39,11 @@ table, th, td {
             echo "You are not logged in";
             exit;
         }
-
+        
 
         ?>
 
-        <button type="button" onclick="location.href='logout.php'">Logout</button>
-    </div>
-
-
-
+   
 
     <div>
     <button type="button" onclick="location.href='addrecord.php'">Click Here to add a Record!</button>
