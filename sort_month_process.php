@@ -37,14 +37,14 @@ if(!$sort_array)
 }
 else
 {
-        $ID_array = $sort_array[0];
-        $transnum_array = $sort_array[1];
-        $date_array = $sort_array[2];
-        $productnumber_array = $sort_array[3];
-        $description_array = $sort_array[4];
-        $customernumber_array = $sort_array[5];
-        $saleamount_array = $sort_array[6];
-        $email_array = $sort_array[7];
+    $ID_array = $sort_array[0];
+    $transnum_array = $sort_array[1];
+    $date_array = $sort_array[2];
+    $productnumber_array = $sort_array[3];
+    $description_array = $sort_array[4];
+    $customernumber_array = $sort_array[5];
+    $saleamount_array = $sort_array[6];
+    $email_array = $sort_array[7];
 
     echo "
      <table>
@@ -60,11 +60,11 @@ else
     </tr>
             ";
 
-        $x = 0;
-        foreach($ID_array as $value)
-        {
+    $x = 0;
+    foreach($ID_array as $value)
+    {
 
-         echo "
+        echo "
         <tr>
             <th>{$ID_array[$x]}</th>
             <th>{$transnum_array[$x]}</th>
@@ -76,19 +76,19 @@ else
             <th>{$email_array[$x]}</th>
         </tr>
             ";
-            $x++;
-       
-        }
-
+        $x++;
         
+    }
 
+    
 
+}
     ?>
 
      </table>
 
 
-}
+
 
 
    
