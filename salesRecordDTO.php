@@ -11,6 +11,7 @@ class record {
     public $Description;
     public $customernumber;
     public $saleamount;
+    public $email;
     
 
 
