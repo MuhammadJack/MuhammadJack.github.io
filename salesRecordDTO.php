@@ -276,6 +276,19 @@ class recordDTO extends record {
 
         return $arr3[0];
     }
+
+    public function make_csv($recordarray)
+    {
+        $fp = fopen('csv_files\file.csv','w');
+
+        foreach ($recordarray as $fields)
+        {
+            fputcsv($fp, $fields);
+        }
+        fclose($fp);
+    }
+
+
 }
 
 ?>
