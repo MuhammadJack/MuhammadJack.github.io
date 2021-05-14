@@ -84,7 +84,10 @@ else
         $x++;
         
     }
-
+    if(!$ID_array)
+    {
+        echo"No data for this Month!";
+    }
     
 
 }
@@ -93,7 +96,7 @@ else
      </table>
 
 
-
+    <button type="button" onclick="location.href='sort_month_record.php'">Go back</button>
 
 
    

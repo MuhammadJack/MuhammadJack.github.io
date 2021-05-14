@@ -57,8 +57,6 @@ table, th, td {
         <button type="submit" name="delete" formaction="delete_record_process.php">Delete Record!</button>
         or
        <button type="submit" name="update" formaction="update_record.php">Update Record!</button>
-        or
-        
     </form>
     
     </div>
