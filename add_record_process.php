@@ -24,5 +24,5 @@ else
     exit();
 }
 
-//comment no
+//comment YES
 ?>
