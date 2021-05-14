@@ -14,17 +14,19 @@ table, th, td {
 </head>
 <body>
 
-    <?php
-    
-        
+    <div style="float: right;">
+
+        <?php
+
+
         if(isset($_SESSION["user_name"]))
         {
            $username = $_SESSION['user_name'];
 
-            echo "<h1> Welcome $username </h1>";
+            echo "<h1 style=\"float: left;\"> Welcome $username </h1>";
            if($_SESSION['admin_check'] == "true")
             {
-                echo "<button style=\"float: right;\" type=\"button\" onclick=\"location.href='adminpage.php'\">Admin Page</button>";
+                echo "<button type=\"button\" onclick=\"location.href='adminpage.php'\">Admin Page</button>";
             }
         }
         else
@@ -32,12 +34,11 @@ table, th, td {
             echo "You are not logged in";
             exit;
         }
-        
-        
-    ?>
-    
-    <div style="float: right;">
-     <button type="button" onclick="location.href='logout.php'">Logout</button>
+
+
+        ?>
+
+        <button type="button" onclick="location.href='logout.php'">Logout</button>
     </div>
 
 
