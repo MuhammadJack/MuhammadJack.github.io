@@ -7,7 +7,7 @@ $recorddto = new recordDTO(null,null,null,null,null,null,null);
 $recorddto->make_csv($sort_array);
 
 
-echo "<a href="csv_files\file.csv" download>Download csv file here</a>;
+echo "<a href=\"csv_files\file.csv\" download>Download csv file here</a>";
 
 
 
