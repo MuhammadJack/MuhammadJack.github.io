@@ -64,6 +64,6 @@ table, th, td {
    ?>
      </table>
 
-
+    <button type="button" onclick="location.href='adminpage.php'">Go back</button>
 </body>
 </html>

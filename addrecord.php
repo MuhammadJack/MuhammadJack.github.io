@@ -53,6 +53,6 @@ session_start();
 
     <button type="submit" name="submit">Add Record!</button>
     </form>
-
+    <button type="button" onclick="location.href='recordspage.php'">Go back</button>
 </body>
 </html>

@@ -63,10 +63,11 @@ else if($array[3] == "true")
     <input type=\"radio\" name=\"admin\" value=\"true\" required>No
     ";
 }
-?>
+    ?>
 <br>
 <button type="submit" name="submit2">Update User!</button>
     </form>
     
+    <button type="button" onclick="location.href='adminpage.php'">Go back</button>
 </body>
 </html>

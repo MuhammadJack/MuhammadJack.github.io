@@ -88,11 +88,11 @@ table, th, td {
     
 
 
-?>
+    ?>
 
 </table>
 
-
+    <button type="button" onclick="location.href='recordspage.php'">Go back</button>
 
 
 

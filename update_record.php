@@ -64,6 +64,6 @@ echo "
     "
 
     ?>
-    
+    <button type="button" onclick="location.href='recordspage.php'">Go back</button>
 </body>
 </html>

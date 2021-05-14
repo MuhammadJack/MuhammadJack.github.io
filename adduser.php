@@ -45,5 +45,6 @@ session_start();
     <button type="submit" name="submit2">Add User!</button>
     </form>
 
+    <button type="button" onclick="location.href='adminpage.php'">Go back</button>
 </body>
 </html>
