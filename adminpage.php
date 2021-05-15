@@ -37,13 +37,13 @@ session_start();
     <div class="main">
     <form action="search_user_process.php" methord="get">
        <lable>Enter User ID here :</lable>
-       <input type="text" name="user_ID"/>
+       <input type="text" name="user_ID" class="searchbar"/>
 
-       <button type="submit" name="search">Search User!</button>
+       <button type="submit" name="search" class="top-btn">Search User!</button>
        or
-       <button type="submit" name="delete" formaction="delete_user_process.php">Delete User!</button>
+       <button type="submit" name="delete" formaction="delete_user_process.php" class="top-btn">Delete User!</button>
        or
-       <button type="submit" name="update" formaction="update_user.php">Update User!</button>
+       <button type="submit" name="update" formaction="update_user.php" class="top-btn">Update User!</button>
    </form>
 
    
