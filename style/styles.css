@@ -47,7 +47,7 @@ body {
 
 .right {
   background: #474A59;
-  box-shadow: 0px 0px 40px 16px rgba(0,0,0,0.22);
+  box-shadow: 0px 0px 40px 16px rgba(0, 0, 0, 0.22);
   color: #F1F1F2;
   position: relative;
   width: 50%;
@@ -78,7 +78,7 @@ body {
   width: 100%;
 }
 
-.input-text:hover {	
+.input-text:hover {
   border: 1px solid #e2e2e5;
 }
 
@@ -87,7 +87,8 @@ body {
   margin-top: 40px;
 }
 
-.submit, .button {
+.submit,
+.button {
   border: 1px solid #e2e2e5;
   background: #474A59;
   color: #e2e2e5;
@@ -95,12 +96,14 @@ body {
 }
 
 .btn2 {
-    width: 45%;
-    margin: auto;
+  width: 45%;
+  margin: auto;
 }
 
-.submit:hover, .submit:focus,
-.button:hover, .button:focus {
+.submit:hover,
+.submit:focus,
+.button:hover,
+.button:focus {
   box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
   transform: translateY(-0.5em);
   border: 1px solid #e2e2e5;
@@ -114,7 +117,7 @@ body {
 }
 
 .sucmsg {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .next-row {
@@ -122,20 +125,20 @@ body {
 }
 
 .side-bar {
-    position: fixed;
-	width: 300px;
-	height: 100%;
-	left: 0;
-	top: 0;
-	background: #e2e2e5;
-	text-align: center;
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #e2e2e5;
+  text-align: center;
 }
 
 .main {
-    position: fixed;
-	height: 100%;
-	left: 350px;
-	top: 0;
+  position: fixed;
+  height: 100%;
+  left: 350px;
+  top: 0;
 }
 
 .side-bar img {
@@ -165,8 +168,63 @@ body {
   margin-top: 10px;
 }
 
-.side-btn:hover, .side-btn:focus {
+.side-btn:hover,
+.side-btn:focus {
   font-weight: bold;
   background: #474A59;
   color: #e2e2e5;
+}
+
+/*table style*/
+table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  left: 100px;
+}
+
+th,
+td {
+  padding-left: 8px;
+}
+
+thead tr {
+  height: 60px;
+  background: #ffed86;
+  font-size: 16px;
+}
+
+tbody tr {
+  height: 48px;
+  border-bottom: 1px solid #e3f1d5;
+}
+
+tbody tr :last-child {
+  border: 0;
+}
+
+td,
+th {
+  text-align: left;
+}
+
+td.l,
+th.l {
+  text-align: right;
+}
+
+td.c,
+th.c {
+  text-align: center;
+}
+
+td.r,
+th.r {
+  text-align: center;
 }
