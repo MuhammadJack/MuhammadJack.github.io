@@ -54,10 +54,10 @@ session_start();
     <table>
         <thead>
             <tr>
-                <th>idUSERS</th>
+                <th>User ID</th>
                 <th>User Name</th>
                 <th>Password</th>
-                <th>admin</th>
+                <th>Admin</th>
             </tr>
         </thead>
         <tbody>
