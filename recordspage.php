@@ -72,6 +72,7 @@
         </div>
     
         <table>
+            <thead>
             <tr>
                 <th>Record ID</th>
                 <th>Transaction Number</th>
@@ -82,6 +83,8 @@
                 <th>Sale Amount</th>
                 <th>Email</th>
             </tr>
+            </thead>
+            <tbody>
             <?php
                 require_once 'salesRecordDTO.php';
                 $recorddto = new recordDTO(null,null,null,null,null,null,null);
@@ -115,6 +118,7 @@
                     $x++;
                 }
             ?>
+            </tbody>
         </table>
     </div>
 </body>
