@@ -213,7 +213,6 @@ body {
 }
 
 table {
-  border-spacing: 1;
   border-collapse: collapse;
   background: white;
   border-radius: 6px;
@@ -233,12 +232,14 @@ td {
 thead tr {
   height: 60px;
   background: #ffed86;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 tbody tr {
   height: 48px;
-  border-bottom: 1px solid #e3f1d5;
+  width: max-content;
+  font-size: 14px;
+  border-bottom: 1px solid #575756;
 }
 
 tbody tr :last-child {
