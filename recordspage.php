@@ -6,7 +6,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-    <title>Logout</title>
+    <title>Records Page</title>
     <link rel="stylesheet" href="style/styles.css" />
     
 </head>
