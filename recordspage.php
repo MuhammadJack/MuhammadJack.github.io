@@ -8,11 +8,7 @@
 	<meta charset="utf-8" />
     <title>Logout</title>
     <link rel="stylesheet" href="style/styles.css" />
-    <style>
-        table, th, td {
-          border: 1px solid black;
-        }
-    </style>
+    
 </head>
 <body>
     <?php
@@ -71,7 +67,7 @@
             </form>
         </div>
     
-        <table>
+        <table style="left: -250px">
             <thead>
             <tr>
                 <th>Record ID</th>
