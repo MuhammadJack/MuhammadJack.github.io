@@ -86,6 +86,22 @@ body {
   border: 1px solid #e2e2e5;
 }
 
+.searchbar {
+  width: 20%;
+  background: transparent;
+  border: 1px solid #474a59;
+  border-bottom: 1px solid #e2e2e5;
+  border-radius: 3px;
+  color: #082172a8;
+  font-size: 18px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.searchbar:hover {
+  border: 1px solid #e2e2e5;
+}
+
 .button-row {
   text-align: center;
   margin-top: 40px;
@@ -212,16 +228,49 @@ body {
   cursor: pointer;
 }
 
+.top-btn {
+  outline: 0;
+  font-size: 40;
+  font-weight: 400;
+  background: #404040;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  margin-right: 8px;
+  transition: all 0.3s ease-out;
+  box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.2), 1px 1px 0 0 #90b0d4f3,
+    2px 2px 0 0 #90b0d4f3, 3px 3px 0 0 #90b0d4f3, 4px 4px 0 0 #90b0d4f3,
+    5px 5px 0 0 #90b0d4f3, 6px 6px 0 0 #90b0d4f3, 7px 7px 0 0 #90b0d4f3,
+    8px 8px 0 0 #90b0d4f3, 9px 9px 0 0 #90b0d4f3, 10px 10px 0 0 #90b0d4f3,
+    11px 11px 0 0 #90b0d4f3, 12px 12px 0 0 #90b0d4f3;
+}
+
+.top-btn:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+.top-btn:active {
+  color: #222;
+  box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.2), 1px 1px 0 0 #90b0d4f3,
+    2px 2px 0 0 #90b0d4f3, 3px 3px 0 0 #90b0d4f3, 4px 4px 0 0 #90b0d4f3,
+    5px 5px 0 0 #90b0d4f3;
+}
+
+/*Table style*/
 table {
   border-collapse: collapse;
   background: white;
   border-radius: 6px;
   overflow: hidden;
-  max-width: 800px;
+  max-width: 940px;
   width: 100%;
   margin: 0 auto;
+  margin-top: 2%;
   position: relative;
-  left: 100px;
+  left: 13%;
 }
 
 th,
@@ -231,7 +280,7 @@ td {
 
 thead tr {
   height: 60px;
-  background: #ffed86;
+  background: #90b0d4f3;
   font-size: 15px;
 }
 
