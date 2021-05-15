@@ -1,6 +1,10 @@
 body {
   margin: 0;
   padding: 20px;
+  font-family: "Optima";
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 25px;
 }
 
 .page {
@@ -46,9 +50,9 @@ body {
 }
 
 .right {
-  background: #474A59;
+  background: #474a59;
   box-shadow: 0px 0px 40px 16px rgba(0, 0, 0, 0.22);
-  color: #F1F1F2;
+  color: #f1f1f2;
   position: relative;
   width: 50%;
 }
@@ -69,7 +73,7 @@ body {
 
 .input-text {
   background: transparent;
-  border: 1px solid #474A59;
+  border: 1px solid #474a59;
   border-bottom: 1px solid #e2e2e5;
   color: #e2e2e5;
   font-size: 18px;
@@ -89,10 +93,18 @@ body {
 
 .submit,
 .button {
-  border: 1px solid #e2e2e5;
-  background: #474A59;
-  color: #e2e2e5;
-  padding: 10px 20px;
+  background: #e9e9e9f8;
+  width: 40%;
+  margin: auto;
+  padding: 15px;
+  margin-top: 10px;
+  border: none;
+  color: #000000;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
 }
 
 .btn2 {
@@ -104,11 +116,13 @@ body {
 .submit:focus,
 .button:hover,
 .button:focus {
-  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-  transform: translateY(-0.5em);
-  border: 1px solid #e2e2e5;
-  background: #e2e2e5;
-  color: #474A59;
+  color: #e2e2e2;
+  font-weight: 700;
+  letter-spacing: 3px;
+  background: none;
+  box-shadow: 0px 5px 40px -10px rgba(255, 255, 255, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(219, 219, 219, 0.57);
+  transition: all 0.3s ease 0s;
 }
 
 .msg {
@@ -135,7 +149,7 @@ body {
 }
 
 .main {
-  position: fixed;
+  position: relative;
   height: 100%;
   left: 350px;
   top: 0;
@@ -156,26 +170,48 @@ body {
 
 .side-msg {
   margin-top: 100px;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .side-btn {
   width: 40%;
   margin: auto;
-  border: 1px solid #474A59;
-  color: #474A59;
   padding: 15px;
   margin-top: 10px;
+  border: none;
+  background: #404040;
+  color: #ffffff;
+  font-weight: 200;
+  text-transform: uppercase;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
 }
 
 .side-btn:hover,
 .side-btn:focus {
-  font-weight: bold;
-  background: #474A59;
-  color: #e2e2e5;
+  color: #404040;
+  font-weight: 700;
+  letter-spacing: 3px;
+  background: none;
+  box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.3s ease 0s;
 }
 
-/*table style*/
+.btn1 {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
 table {
   border-spacing: 1;
   border-collapse: collapse;
@@ -197,7 +233,7 @@ td {
 thead tr {
   height: 60px;
   background: #ffed86;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 tbody tr {
