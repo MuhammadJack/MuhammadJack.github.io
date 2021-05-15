@@ -8,7 +8,6 @@
 	<meta charset="utf-8" />
     <title>Records Page</title>
     <link rel="stylesheet" href="style/styles.css" />
-    
 </head>
 <body>
     <?php
@@ -48,27 +47,29 @@
                     echo "<div class='side-msg'>Guest Login</div>";
                 }
         ?>
-        <div><button type="button" onclick="location.href='logout.php'" class="side-btn">Logout</button></div>
+        <div><button type="button" onclick="location.href='logout.php'" class="side-btn">Log out</button></div>
     </div>
     
     <div class="main">
         <div>
-            <button type="button" onclick="location.href='addrecord.php'">Add a Record</button>
-            <button type="button" onclick="location.href='sort_month_record.php'">Monthly Records</button>
+            <div style="margin-left: 2.5em; padding: 0 21.2em 2em" >
+                <button type="button" onclick="location.href='addrecord.php'" class="top-btn">Add a Record</button>
+                <button type="button" onclick="location.href='sort_month_record.php'" class="top-btn">Monthly Records</button> 
+            </div>
             <form action="search_record_process.php" methord="get">
                 <label>Enter Record ID</label>
-                <input type="text" name="Record_ID"/>
+                <input type="text" name="Record_ID" class="searchbar"/>
         
-                <button type="submit" name="search">Search Record</button>
+                <button type="submit" name="search" class="top-btn">Search Record</button>
                 or
-                <button type="submit" name="delete" formaction="delete_record_process.php">Delete Record</button>
+                <button type="submit" name="delete" formaction="delete_record_process.php" class="top-btn">Delete Record</button>
                 or
-               <button type="submit" name="update" formaction="update_record.php">Update Record</button>
+               <button type="submit" name="update" formaction="update_record.php" class="top-btn">Update Record</button>
             </form>
-        </div>
+    </div>
     
-        <table style="left: -250px">
-            <thead>
+    <table style="left: -200px">
+        <thead>
             <tr>
                 <th>Record ID</th>
                 <th>Transaction Number</th>
@@ -79,8 +80,8 @@
                 <th>Sale Amount</th>
                 <th>Email</th>
             </tr>
-            </thead>
-            <tbody>
+        </thead>
+        <tbody>
             <?php
                 require_once 'salesRecordDTO.php';
                 $recorddto = new recordDTO(null,null,null,null,null,null,null);
@@ -114,8 +115,8 @@
                     $x++;
                 }
             ?>
-            </tbody>
-        </table>
+        </tbody>
+    </table>
     </div>
 </body>
 </html>
