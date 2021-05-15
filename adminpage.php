@@ -29,8 +29,8 @@ session_start();
 
         <img src="/images/medicine.png" alt="logo" />
         <div class="side-title">PHP-SRePS</div>
-        <button type="button" onclick="location.href='adduser.php'">Click Here to add a User!</button>
-        <button type="button" onclick="location.href='logout.php'">Logout</button>
+        <button type="button" onclick="location.href='adduser.php'" class="side-btn">Click Here to add a User!</button>
+        <button type="button" onclick="location.href='logout.php'" class="side-btn">Logout</button>
     </div>
 
 
