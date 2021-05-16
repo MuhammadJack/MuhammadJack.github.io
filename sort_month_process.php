@@ -95,10 +95,12 @@ else
 
      </table>
     <?php
-    setcookie("sort_array",$sort_array,time() + (86400 * 30), "/");
+    require_once 'salesRecordDTO.php';
+    $recorddto = new recordDTO(null,null,null,null,null,null,null);
+    $recorddto->make_csv($sort_array);
     ?>
 
-    <button type="button" onclick="location.href='csv_file_gen.php'">Genarate a csv file</button>
+    <a href="file.csv" download>Download as csv file here</a>
     <br>
     <button type="button" onclick="location.href='recordspage.php'">Go back</button>
 

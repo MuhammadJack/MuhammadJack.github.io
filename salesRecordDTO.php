@@ -279,14 +279,34 @@ class recordDTO extends record {
 
     public function make_csv($recordarray)
     {
-        $fp = fopen('/csv_files/file.csv','w');
+        $fp = fopen('file.csv','w');
 
         if(!$fp)
         {
             return false;
         }
 
-        foreach ($recordarray as $fields)
+        $temp_array = array("ID","transactionnum","date","productnumber","description","customernumber","saleamount","email");
+        fputcsv($fp, $temp_array);
+
+        $ID_array = $recordarray[0];
+        $transnum_array = $recordarray[1];
+        $date_array = $recordarray[2];
+        $productnumber_array = $recordarray[3];
+        $description_array = $recordarray[4];
+        $customernumber_array = $recordarray[5];
+        $saleamount_array = $recordarray[6];
+        $email_array = $recordarray[7];
+
+        $x = 0;
+        foreach($ID_array as $value)
+        {
+            $row[$x] = array($ID_array[$x],$transnum_array[$x],$date_array[$x],$productnumber_array[$x],$description_array[$x],$customernumber_array[$x],$saleamount_array[$x],$email_array[$x]);
+            $x++;
+        }
+
+
+        foreach ($row as $fields)
         {
             fputcsv($fp, $fields);
         }
