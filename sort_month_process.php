@@ -100,7 +100,7 @@ else
 
     <button type="button" onclick="location.href='csv_file_gen.php'">Genarate a csv file</button>
     <br>
-    <button type="button" onclick="location.href='sort_month_record.php'">Go back</button>
+    <button type="button" onclick="location.href='recordspage.php'">Go back</button>
 
 
    
