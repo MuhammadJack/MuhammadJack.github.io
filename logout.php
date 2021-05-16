@@ -18,20 +18,20 @@
             </div>
             
             <div class="right">
-            <?php
-                if(isset($_SESSION["user_name"]))
-                {
-                    session_destroy();
-                   
-                    echo "<div class='msg'>Log Out Successful</div>";
-                }
-                else
-                {
-                    echo "<div class='msg'>Not Logged In Yet</div>";
-                }
-                
-                echo "<div class='button-row'><button type=\"button\" onclick=\"location.href='index.php'\" class='button'>Log In</button></div>";
-            ?>
+                <?php
+                    if(isset($_SESSION["user_name"]))
+                    {
+                        session_destroy();
+                       
+                        echo "<div class='msg'>Log Out Successful</div>";
+                    }
+                    else
+                    {
+                        echo "<div class='msg'>Not Logged In Yet</div>";
+                    }
+                    
+                    echo "<div class='button-row'><button type=\"button\" onclick=\"location.href='index.php'\" class='button'>Log In</button></div>";
+                ?>
             </div>
         </div>
     </div>

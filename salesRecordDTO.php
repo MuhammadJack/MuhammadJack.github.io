@@ -1,9 +1,4 @@
 <?php
-
-
-
-
-
 class record {
     public $transactionnum;
     public $date;
@@ -12,8 +7,6 @@ class record {
     public $customernumber;
     public $saleamount;
     public $email;
-
-
 
     public function __construct($transactionnum,$date,$productnumber,$description,$customernumber,$saleamount,$email)
     {
@@ -66,8 +59,6 @@ class record {
 
 
 class recordDTO extends record {
-
-
     public function displayrecord($idSALESRECORD)
     {
         $servername = "localhost";
@@ -109,7 +100,6 @@ class recordDTO extends record {
         $dbname = "id16814382_peopleshealthpharmacy";
 
         $tablename = "SALESRECORD";
-
 
         $conn = mysqli_connect($servername,$user,$pass,$dbname);
 
@@ -156,9 +146,7 @@ class recordDTO extends record {
 
         $tablename = "SALESRECORD";
 
-
         $conn = mysqli_connect($servername,$user,$pass,$dbname);
-
 
         $transactionnum_temp = $this->get_transactionnum();
         $date_temp = $this->get_date();
@@ -167,7 +155,6 @@ class recordDTO extends record {
         $customernumber_temp = $this->get_customernumber();
         $saleamount_temp = $this->get_saleamount();
         $email_temp = $this->get_email();
-
 
         $sql = "INSERT INTO $tablename (`transactionnum`, `date`, `productnumber`, `description`, `customernumber`, `saleamount`, `email`) VALUES ('$transactionnum_temp', '$date_temp', '$productnumber_temp', '$description_temp', '$customernumber_temp', '$saleamount_temp', '$email_temp');";
         $result = mysqli_query($conn, $sql);
@@ -188,7 +175,6 @@ class recordDTO extends record {
 
         $tablename = "SALESRECORD";
 
-
         $conn = mysqli_connect($servername,$user,$pass,$dbname);
 
         $sql = "DELETE FROM $tablename WHERE idSALESRECORD='$idSALESRECORD';";
@@ -208,7 +194,6 @@ class recordDTO extends record {
         $dbname = "id16814382_peopleshealthpharmacy";
 
         $tablename = "SALESRECORD";
-
 
         $conn = mysqli_connect($servername,$user,$pass,$dbname);
 
@@ -262,9 +247,11 @@ class recordDTO extends record {
 
             $x++;
         }
-
-        $recordarray = array($ID_array_sorted,$transnum_array_sorted,$date_array_sorted,$productnumber_array_sorted,$description_array_sorted,$customernumber_array_sorted,$saleamount_array_sorted,$email_array_sorted);
-        return $recordarray;
+        
+        if (isset($ID_array_sorted))
+            return array($ID_array_sorted, $transnum_array_sorted, $date_array_sorted, $productnumber_array_sorted, $description_array_sorted, $customernumber_array_sorted, $saleamount_array_sorted, $email_array_sorted);
+        else 
+            return null;
     }
 
     public function datespliter($date)
@@ -305,7 +292,6 @@ class recordDTO extends record {
             $x++;
         }
 
-
         foreach ($row as $fields)
         {
             fputcsv($fp, $fields);
@@ -314,8 +300,5 @@ class recordDTO extends record {
 
         return true;
     }
-
-
 }
-
 ?>
