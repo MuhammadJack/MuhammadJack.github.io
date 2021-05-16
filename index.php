@@ -44,7 +44,7 @@
                                 <label class='label'>User Name</label>
                                 <input type='text' name='username' class='input-text' />
                                 <label class='label'>Password</label>
-                                <input type='text' name='password' class='input-text' />
+                                <input type='password' name='password' class='input-text' />
                                 <div class='button-row'><button type='submit' name='submit' class='submit'>Login</button></div>
                             </form>
                         </div>";

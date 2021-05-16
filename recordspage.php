@@ -58,7 +58,7 @@
             </div>
             <form action="search_record_process.php" methord="get">
                 <label>Enter Record ID</label>
-                <input type="text" name="Record_ID" class="searchbar"/>
+                <input type="text" name="Record_ID" class="searchbar" required/>
         
                 <button type="submit" name="search" class="top-btn">Search Record</button>
                 or
