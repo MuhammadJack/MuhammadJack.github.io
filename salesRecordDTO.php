@@ -76,7 +76,7 @@ class recordDTO extends record {
         $pass = $databaseinfo[2];
         $dbname = $databaseinfo[3];
 
-        $tablename = $databaseinfo[5];
+        $tablename = $databaseinfo[4];
 
         $conn = mysqli_connect($servername,$user,$pass,$dbname);
 
@@ -109,7 +109,7 @@ class recordDTO extends record {
         $pass = $databaseinfo[2];
         $dbname = $databaseinfo[3];
 
-        $tablename = $databaseinfo[5];
+        $tablename = $databaseinfo[4];
 
         $conn = mysqli_connect($servername,$user,$pass,$dbname);
 
@@ -154,7 +154,7 @@ class recordDTO extends record {
         $pass = $databaseinfo[2];
         $dbname = $databaseinfo[3];
 
-        $tablename = $databaseinfo[5];
+        $tablename = $databaseinfo[4];
 
         $conn = mysqli_connect($servername,$user,$pass,$dbname);
 
@@ -183,7 +183,7 @@ class recordDTO extends record {
         $pass = $databaseinfo[2];
         $dbname = $databaseinfo[3];
 
-        $tablename = $databaseinfo[5];
+        $tablename = $databaseinfo[4];
 
         $conn = mysqli_connect($servername,$user,$pass,$dbname);
 
@@ -203,7 +203,7 @@ class recordDTO extends record {
         $pass = $databaseinfo[2];
         $dbname = $databaseinfo[3];
 
-        $tablename = $databaseinfo[5];
+        $tablename = $databaseinfo[4];
 
         $conn = mysqli_connect($servername,$user,$pass,$dbname);
 
