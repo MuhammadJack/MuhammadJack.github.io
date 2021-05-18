@@ -18,42 +18,42 @@
             </div>
             
             <div class="right">
-            <?php
-                $username = $_POST['username'];
-                $password = $_POST['password'];
-                
-                require_once ('userDTO.php');
-                
-                $userdto = new userDTO($username, $password, null);
-                $ID = false;
-                $ID = $userdto->checkuser();
-                $user = $userdto->displayuser($ID);
-                
-                $_SESSION['user_name'] = $user[1];
-                $_SESSION['admin_check'] = $user[3];
-                
-                if(!$ID)
-                {
-                    echo "<div class='msg'>Invalid username or password</div>";
-                    echo "<div class='button-row'><button type=\"button\" onclick=\"location.href='index.php'\" class='button'>Go Back</button></div>";
-                }
-                else
-                {
-                    if($_SESSION['admin_check'] == "true")
-                        echo "<div class='msg sucmsg'>Welcome $user[1]</div>";
-                    else
-                        echo "<div class='msg sucmsg'>Guest Login</div>";
+                <?php
+                    $username = $_POST['username'];
+                    $password = $_POST['password'];
                     
-                    echo "<div class='button-row'><button type=\"button\" onclick=\"location.href='recordspage.php'\" class='button btn2'>Access Records</button></div>";
-                        
-                    if($_SESSION['admin_check'] == "true")
+                    require_once ('userDTO.php');
+                    
+                    $userdto = new userDTO($username, $password, null);
+                    $ID = false;
+                    $ID = $userdto->checkuser();
+                    $user = $userdto->displayuser($ID);
+                    
+                    $_SESSION['user_name'] = $user[1];
+                    $_SESSION['admin_check'] = $user[3];
+                    
+                    if(!$ID)
                     {
-                        echo "<div class='button-row next-row'><button type=\"button\" onclick=\"location.href='adminpage.php'\" class='button btn2'>Admin Page</button></div>";
+                        echo "<div class='msg'>Invalid username or password</div>";
+                        echo "<div class='button-row'><button type=\"button\" onclick=\"location.href='index.php'\" class='button'>Go Back</button></div>";
                     }
+                    else
+                    {
+                        if($_SESSION['admin_check'] == "true")
+                            echo "<div class='msg sucmsg'>Welcome $user[1]</div>";
+                        else
+                            echo "<div class='msg sucmsg'>Guest Login</div>";
                         
-                    echo "<div class='button-row next-row'><button type=\"button\" onclick=\"location.href='logout.php'\" class='button btn2'>Logout</button></div>";
-                }
-            ?>
+                        echo "<div class='button-row'><button type=\"button\" onclick=\"location.href='recordspage.php'\" class='button btn2'>Access Records</button></div>";
+                            
+                        if($_SESSION['admin_check'] == "true")
+                        {
+                            echo "<div class='button-row next-row'><button type=\"button\" onclick=\"location.href='adminpage.php'\" class='button btn2'>Admin Page</button></div>";
+                        }
+                            
+                        echo "<div class='button-row next-row'><button type=\"button\" onclick=\"location.href='logout.php'\" class='button btn2'>Log Out</button></div>";
+                    }
+                ?>
             </div>
         </div>
     </div>

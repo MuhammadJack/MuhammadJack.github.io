@@ -27,15 +27,14 @@
                         else
                             echo "<div class='msg sucmsg'>Guest Login</div>";
                         
-                        echo "<div class='button-row'><button type=\"button\" onclick=\"location.href='recordspage.php'\" class='button btn2'>Access Records</button></div>";
+                        echo "<div class='button-row'><button type=\"button\" onclick=\"location.href='recordspage.php'\" class='button btn2'>Records</button></div>";
                             
                         if($_SESSION['admin_check'] == "true")
                         {
                             echo "<div class='button-row next-row'><button type=\"button\" onclick=\"location.href='adminpage.php'\" class='button btn2'>Admin Page</button></div>";
                         }
                             
-                        echo "<div class='button-row next-row'><button type=\"button\" onclick=\"location.href='logout.php'\" class='button btn2'>Logout</button></div>";
-
+                        echo "<div class='button-row next-row'><button type=\"button\" onclick=\"location.href='logout.php'\" class='button btn2'>Log Out</button></div>";
                     }
                     else
                     {
@@ -49,9 +48,7 @@
                             </form>
                         </div>";
                     }
-                    
                 ?>
-
             </div>
         </div>
     </div>

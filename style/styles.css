@@ -124,7 +124,7 @@ body {
 }
 
 .btn2 {
-  width: 45%;
+  width: 50%;
   margin: auto;
 }
 
@@ -156,7 +156,7 @@ body {
 
 .side-bar {
   position: fixed;
-  width: 300px;
+  width: 20%;
   height: 100%;
   left: 0;
   top: 0;
@@ -167,8 +167,9 @@ body {
 .main {
   position: relative;
   height: 100%;
-  left: 350px;
+  left: 21%;
   top: 0;
+  width: 79%;
 }
 
 .side-bar img {
@@ -190,7 +191,7 @@ body {
 }
 
 .side-btn {
-  width: 40%;
+  width: 50%;
   margin: auto;
   padding: 15px;
   margin-top: 10px;
@@ -270,7 +271,6 @@ table {
   margin: 0 auto;
   margin-top: 2%;
   position: relative;
-  left: 13%;
 }
 
 th,
@@ -313,4 +313,20 @@ th.c {
 td.r,
 th.r {
   text-align: center;
+}
+
+
+
+.title-row {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.pg-title {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.form-row {
+  margin-bottom: 10px;
 }
