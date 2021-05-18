@@ -31,14 +31,33 @@ class user {
 
 class userDTO extends User {
 
+    public function getdatabase()
+    {
+        $fp = fopen('database_info.txt','r');
+
+        $x = 0;
+        while(!feof($fp))
+        {
+            $databaseinfo[$x] = fgets($fp);
+            $x++;
+        }
+
+        fclose($fp);
+
+        return $databaseinfo;
+
+    }
+
     public function checkuser()
     {
-        $servername = "localhost";
-        $user = "id16814382_root";
-        $pass = "6r!TYM8NT(BA7Ep";
-        $dbname = "id16814382_peopleshealthpharmacy";
+        $databaseinfo = $this->getdatabase();
 
-        $tablename = "USERS";
+        $servername = $databaseinfo[0];
+        $user = $databaseinfo[1];
+        $pass = $databaseinfo[2];
+        $dbname = $databaseinfo[3];
+
+        $tablename = $databaseinfo[4];
 
 
         $conn = mysqli_connect($servername,$user,$pass,$dbname);
@@ -55,7 +74,7 @@ class userDTO extends User {
         $username_checker = $holder["username"];
         $password_checker = $holder["password"];
 
-  
+
         if(($username_temp == $username_checker)and($password_temp == $password_checker))
         {
             return $ID_hold;
@@ -66,12 +85,14 @@ class userDTO extends User {
 
     public function displayuser($idUSERS_temp)
     {
-        $servername = "localhost";
-        $user = "id16814382_root";
-        $pass = "6r!TYM8NT(BA7Ep";
-        $dbname = "id16814382_peopleshealthpharmacy";
+        $databaseinfo = $this->getdatabase();
 
-        $tablename = "USERS";
+        $servername = $databaseinfo[0];
+        $user = $databaseinfo[1];
+        $pass = $databaseinfo[2];
+        $dbname = $databaseinfo[3];
+
+        $tablename = $databaseinfo[4];
 
 
         $conn = mysqli_connect($servername,$user,$pass,$dbname);
@@ -96,12 +117,14 @@ class userDTO extends User {
 
     public function displayall()
     {
-        $servername = "localhost";
-        $user = "id16814382_root";
-        $pass = "6r!TYM8NT(BA7Ep";
-        $dbname = "id16814382_peopleshealthpharmacy";
+        $databaseinfo = $this->getdatabase();
 
-        $tablename = "USERS";
+        $servername = $databaseinfo[0];
+        $user = $databaseinfo[1];
+        $pass = $databaseinfo[2];
+        $dbname = $databaseinfo[3];
+
+        $tablename = $databaseinfo[4];
 
 
         $conn = mysqli_connect($servername,$user,$pass,$dbname);
@@ -138,12 +161,14 @@ class userDTO extends User {
 
     public function adduser()
     {
-        $servername = "localhost";
-        $user = "id16814382_root";
-        $pass = "6r!TYM8NT(BA7Ep";
-        $dbname = "id16814382_peopleshealthpharmacy";
+        $databaseinfo = $this->getdatabase();
 
-        $tablename = "USERS";
+        $servername = $databaseinfo[0];
+        $user = $databaseinfo[1];
+        $pass = $databaseinfo[2];
+        $dbname = $databaseinfo[3];
+
+        $tablename = $databaseinfo[4];
 
 
         $conn = mysqli_connect($servername,$user,$pass,$dbname);
@@ -164,12 +189,14 @@ class userDTO extends User {
 
     public function deleteuser($idUSERS_temp)
     {
-        $servername = "localhost";
-        $user = "id16814382_root";
-        $pass = "6r!TYM8NT(BA7Ep";
-        $dbname = "id16814382_peopleshealthpharmacy";
+        $databaseinfo = $this->getdatabase();
 
-        $tablename = "USERS";
+        $servername = $databaseinfo[0];
+        $user = $databaseinfo[1];
+        $pass = $databaseinfo[2];
+        $dbname = $databaseinfo[3];
+
+        $tablename = $databaseinfo[4];
 
 
         $conn = mysqli_connect($servername,$user,$pass,$dbname);
@@ -185,12 +212,14 @@ class userDTO extends User {
 
     public function updateuser($idUSERS_temp)
     {
-         $servername = "localhost";
-        $user = "id16814382_root";
-        $pass = "6r!TYM8NT(BA7Ep";
-        $dbname = "id16814382_peopleshealthpharmacy";
+        $databaseinfo = $this->getdatabase();
 
-        $tablename = "USERS";
+        $servername = $databaseinfo[0];
+        $user = $databaseinfo[1];
+        $pass = $databaseinfo[2];
+        $dbname = $databaseinfo[3];
+
+        $tablename = $databaseinfo[4];
 
 
         $conn = mysqli_connect($servername,$user,$pass,$dbname);

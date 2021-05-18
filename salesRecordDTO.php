@@ -67,15 +67,33 @@ class record {
 
 class recordDTO extends record {
 
+    public function getdatabase()
+    {
+        $fp = fopen('database_info.txt','r');
+
+        $x = 0;
+        while(!feof($fp))
+        {
+            $databaseinfo[$x] = fgets($fp);
+            $x++;
+        }
+
+        fclose($fp);
+
+        return $databaseinfo;
+
+    }
 
     public function displayrecord($idSALESRECORD)
     {
-        $servername = "localhost";
-        $user = "id16814382_root";
-        $pass = "6r!TYM8NT(BA7Ep";
-        $dbname = "id16814382_peopleshealthpharmacy";
+        $databaseinfo = $this->getdatabase();
 
-        $tablename = "SALESRECORD";
+        $servername = $databaseinfo[0];
+        $user = $databaseinfo[1];
+        $pass = $databaseinfo[2];
+        $dbname = $databaseinfo[3];
+
+        $tablename = $databaseinfo[5];
 
         $conn = mysqli_connect($servername,$user,$pass,$dbname);
 
@@ -103,12 +121,12 @@ class recordDTO extends record {
 
     public function displayall()
     {
-        $servername = "localhost";
-        $user = "id16814382_root";
-        $pass = "6r!TYM8NT(BA7Ep";
-        $dbname = "id16814382_peopleshealthpharmacy";
+        $servername = $databaseinfo[0];
+        $user = $databaseinfo[1];
+        $pass = $databaseinfo[2];
+        $dbname = $databaseinfo[3];
 
-        $tablename = "SALESRECORD";
+        $tablename = $databaseinfo[5];
 
 
         $conn = mysqli_connect($servername,$user,$pass,$dbname);
@@ -149,12 +167,12 @@ class recordDTO extends record {
 
     public function addrecord()
     {
-        $servername = "localhost";
-        $user = "id16814382_root";
-        $pass = "6r!TYM8NT(BA7Ep";
-        $dbname = "id16814382_peopleshealthpharmacy";
+        $servername = $databaseinfo[0];
+        $user = $databaseinfo[1];
+        $pass = $databaseinfo[2];
+        $dbname = $databaseinfo[3];
 
-        $tablename = "SALESRECORD";
+        $tablename = $databaseinfo[5];
 
 
         $conn = mysqli_connect($servername,$user,$pass,$dbname);
@@ -181,12 +199,12 @@ class recordDTO extends record {
 
     public function deleterecord($idSALESRECORD)
     {
-        $servername = "localhost";
-        $user = "id16814382_root";
-        $pass = "6r!TYM8NT(BA7Ep";
-        $dbname = "id16814382_peopleshealthpharmacy";
+        $servername = $databaseinfo[0];
+        $user = $databaseinfo[1];
+        $pass = $databaseinfo[2];
+        $dbname = $databaseinfo[3];
 
-        $tablename = "SALESRECORD";
+        $tablename = $databaseinfo[5];
 
 
         $conn = mysqli_connect($servername,$user,$pass,$dbname);
@@ -202,12 +220,12 @@ class recordDTO extends record {
 
     public function updaterecord($idSALESRECORD)
     {
-        $servername = "localhost";
-        $user = "id16814382_root";
-        $pass = "6r!TYM8NT(BA7Ep";
-        $dbname = "id16814382_peopleshealthpharmacy";
+        $servername = $databaseinfo[0];
+        $user = $databaseinfo[1];
+        $pass = $databaseinfo[2];
+        $dbname = $databaseinfo[3];
 
-        $tablename = "SALESRECORD";
+        $tablename = $databaseinfo[5];
 
 
         $conn = mysqli_connect($servername,$user,$pass,$dbname);
