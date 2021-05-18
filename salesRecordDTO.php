@@ -104,6 +104,8 @@ class recordDTO extends record {
 
     public function displayall()
     {
+        $databaseinfo = $this->getdatabase();
+
         $servername = $databaseinfo[0];
         $user = $databaseinfo[1];
         $pass = $databaseinfo[2];
@@ -149,6 +151,8 @@ class recordDTO extends record {
 
     public function addrecord()
     {
+        $databaseinfo = $this->getdatabase();
+
         $servername = $databaseinfo[0];
         $user = $databaseinfo[1];
         $pass = $databaseinfo[2];
@@ -178,6 +182,8 @@ class recordDTO extends record {
 
     public function deleterecord($idSALESRECORD)
     {
+        $databaseinfo = $this->getdatabase();
+
         $servername = $databaseinfo[0];
         $user = $databaseinfo[1];
         $pass = $databaseinfo[2];
@@ -198,6 +204,8 @@ class recordDTO extends record {
 
     public function updaterecord($idSALESRECORD)
     {
+        $databaseinfo = $this->getdatabase();
+
         $servername = $databaseinfo[0];
         $user = $databaseinfo[1];
         $pass = $databaseinfo[2];
