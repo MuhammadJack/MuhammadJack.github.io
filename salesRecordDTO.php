@@ -62,19 +62,9 @@ class recordDTO extends record {
 
     public function getdatabase()
     {
-        $fp = fopen('database_info.txt','r');
-
-        $x = 0;
-        while(!feof($fp))
-        {
-            $databaseinfo[$x] = fgets($fp);
-            $x++;
-        }
-
-        fclose($fp);
+        $databaseinfo = array("localhost","id16814382_root","6r!TYM8NT(BA7Ep","id16814382_peopleshealthpharmacy","SALESRECORD");
 
         return $databaseinfo;
-
     }
 
     public function displayrecord($idSALESRECORD)
@@ -267,10 +257,10 @@ class recordDTO extends record {
 
             $x++;
         }
-        
+
         if (isset($ID_array_sorted))
             return array($ID_array_sorted, $transnum_array_sorted, $date_array_sorted, $productnumber_array_sorted, $description_array_sorted, $customernumber_array_sorted, $saleamount_array_sorted, $email_array_sorted);
-        else 
+        else
             return null;
     }
 

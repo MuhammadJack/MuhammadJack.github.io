@@ -33,19 +33,9 @@ class userDTO extends User {
 
     public function getdatabase()
     {
-        $fp = fopen('database_info.txt','r');
-
-        $x = 0;
-        while(!feof($fp))
-        {
-            $databaseinfo[$x] = fgets($fp);
-            $x++;
-        }
-
-        fclose($fp);
+        $databaseinfo = array("localhost","id16814382_root","6r!TYM8NT(BA7Ep","id16814382_peopleshealthpharmacy","USERS");
 
         return $databaseinfo;
-
     }
 
     public function checkuser()
