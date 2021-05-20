@@ -1,9 +1,4 @@
 <?php
-
-
-
-
-
 class record {
     public $transactionnum;
     public $date;
@@ -12,8 +7,6 @@ class record {
     public $customernumber;
     public $saleamount;
     public $email;
-    
-
 
     public function __construct($transactionnum,$date,$productnumber,$description,$customernumber,$saleamount,$email)
     {
@@ -24,7 +17,7 @@ class record {
         $this->customernumber = $customernumber;
         $this->saleamount = $saleamount;
         $this->email = $email;
-    
+
     }
 
     public function get_transactionnum()
@@ -67,15 +60,23 @@ class record {
 
 class recordDTO extends record {
 
+    public function getdatabase()
+    {
+        $databaseinfo = array("localhost","id16814382_root","6r!TYM8NT(BA7Ep","id16814382_peopleshealthpharmacy","SALESRECORD");
+
+        return $databaseinfo;
+    }
 
     public function displayrecord($idSALESRECORD)
     {
-        $servername = "localhost";
-        $user = "id16814382_root";
-        $pass = "6r!TYM8NT(BA7Ep";
-        $dbname = "id16814382_peopleshealthpharmacy";
+        $databaseinfo = $this->getdatabase();
 
-        $tablename = "SALESRECORD";
+        $servername = $databaseinfo[0];
+        $user = $databaseinfo[1];
+        $pass = $databaseinfo[2];
+        $dbname = $databaseinfo[3];
+
+        $tablename = $databaseinfo[4];
 
         $conn = mysqli_connect($servername,$user,$pass,$dbname);
 
@@ -103,13 +104,14 @@ class recordDTO extends record {
 
     public function displayall()
     {
-        $servername = "localhost";
-        $user = "id16814382_root";
-        $pass = "6r!TYM8NT(BA7Ep";
-        $dbname = "id16814382_peopleshealthpharmacy";
+        $databaseinfo = $this->getdatabase();
 
-        $tablename = "SALESRECORD";
+        $servername = $databaseinfo[0];
+        $user = $databaseinfo[1];
+        $pass = $databaseinfo[2];
+        $dbname = $databaseinfo[3];
 
+        $tablename = $databaseinfo[4];
 
         $conn = mysqli_connect($servername,$user,$pass,$dbname);
 
@@ -132,7 +134,7 @@ class recordDTO extends record {
                 $description_hold[$x] = $holder["description"];
                 $customernumber_hold[$x] = $holder["customernumber"];
                 $saleamount_hold[$x] = $holder["saleamount"];
-                $email_hold = $holder["email"];
+                $email_hold[$x] = $holder["email"];
 
                 $x++;
             }
@@ -149,16 +151,16 @@ class recordDTO extends record {
 
     public function addrecord()
     {
-        $servername = "localhost";
-        $user = "id16814382_root";
-        $pass = "6r!TYM8NT(BA7Ep";
-        $dbname = "id16814382_peopleshealthpharmacy";
+        $databaseinfo = $this->getdatabase();
 
-        $tablename = "SALESRECORD";
+        $servername = $databaseinfo[0];
+        $user = $databaseinfo[1];
+        $pass = $databaseinfo[2];
+        $dbname = $databaseinfo[3];
 
+        $tablename = $databaseinfo[4];
 
         $conn = mysqli_connect($servername,$user,$pass,$dbname);
-
 
         $transactionnum_temp = $this->get_transactionnum();
         $date_temp = $this->get_date();
@@ -167,7 +169,6 @@ class recordDTO extends record {
         $customernumber_temp = $this->get_customernumber();
         $saleamount_temp = $this->get_saleamount();
         $email_temp = $this->get_email();
-
 
         $sql = "INSERT INTO $tablename (`transactionnum`, `date`, `productnumber`, `description`, `customernumber`, `saleamount`, `email`) VALUES ('$transactionnum_temp', '$date_temp', '$productnumber_temp', '$description_temp', '$customernumber_temp', '$saleamount_temp', '$email_temp');";
         $result = mysqli_query($conn, $sql);
@@ -181,13 +182,14 @@ class recordDTO extends record {
 
     public function deleterecord($idSALESRECORD)
     {
-        $servername = "localhost";
-        $user = "id16814382_root";
-        $pass = "6r!TYM8NT(BA7Ep";
-        $dbname = "id16814382_peopleshealthpharmacy";
+        $databaseinfo = $this->getdatabase();
 
-        $tablename = "SALESRECORD";
+        $servername = $databaseinfo[0];
+        $user = $databaseinfo[1];
+        $pass = $databaseinfo[2];
+        $dbname = $databaseinfo[3];
 
+        $tablename = $databaseinfo[4];
 
         $conn = mysqli_connect($servername,$user,$pass,$dbname);
 
@@ -202,13 +204,14 @@ class recordDTO extends record {
 
     public function updaterecord($idSALESRECORD)
     {
-        $servername = "localhost";
-        $user = "id16814382_root";
-        $pass = "6r!TYM8NT(BA7Ep";
-        $dbname = "id16814382_peopleshealthpharmacy";
+        $databaseinfo = $this->getdatabase();
 
-        $tablename = "SALESRECORD";
+        $servername = $databaseinfo[0];
+        $user = $databaseinfo[1];
+        $pass = $databaseinfo[2];
+        $dbname = $databaseinfo[3];
 
+        $tablename = $databaseinfo[4];
 
         $conn = mysqli_connect($servername,$user,$pass,$dbname);
 
@@ -230,6 +233,90 @@ class recordDTO extends record {
         return true;
     }
 
-}
+    public function sortbymonth($month)
+    {
+        $info_holder = $this->displayall();
 
+        $ID_array = $info_holder[0];
+        $transnum_array = $info_holder[1];
+        $date_array = $info_holder[2];
+        $productnumber_array = $info_holder[3];
+        $description_array = $info_holder[4];
+        $customernumber_array = $info_holder[5];
+        $saleamount_array = $info_holder[6];
+        $email_array = $info_holder[7];
+
+        $x = 0;
+        $y = 0;
+        foreach($ID_array as $value)
+        {
+            if($this->datespliter($date_array[$x]) == $month)
+            {
+            $ID_array_sorted[$y] = $ID_array[$x];
+            $transnum_array_sorted[$y] =  $transnum_array[$x];
+            $date_array_sorted[$y] = $date_array[$x];
+            $productnumber_array_sorted[$y] = $productnumber_array[$x];
+            $description_array_sorted[$y] = $description_array[$x];
+            $customernumber_array_sorted[$y] = $customernumber_array[$x];
+            $saleamount_array_sorted[$y] = $saleamount_array[$x];
+            $email_array_sorted[$y] = $email_array[$x];
+            $y++;
+            }
+
+            $x++;
+        }
+
+        if (isset($ID_array_sorted))
+            return array($ID_array_sorted, $transnum_array_sorted, $date_array_sorted, $productnumber_array_sorted, $description_array_sorted, $customernumber_array_sorted, $saleamount_array_sorted, $email_array_sorted);
+        else
+            return null;
+    }
+
+    public function datespliter($date)
+    {
+        $str = $date;
+
+        $arr2 = str_split($str, 5);
+        $arr3 = str_split($arr2[1], 2);
+
+        return $arr3[0];
+    }
+
+    public function make_csv($recordarray)
+    {
+        $fp = fopen('file.csv','w');
+
+        if(!$fp)
+        {
+            return false;
+        }
+
+        $temp_array = array("ID","transactionnum","date","productnumber","description","customernumber","saleamount","email");
+        fputcsv($fp, $temp_array);
+
+        $ID_array = $recordarray[0];
+        $transnum_array = $recordarray[1];
+        $date_array = $recordarray[2];
+        $productnumber_array = $recordarray[3];
+        $description_array = $recordarray[4];
+        $customernumber_array = $recordarray[5];
+        $saleamount_array = $recordarray[6];
+        $email_array = $recordarray[7];
+
+        $x = 0;
+        foreach($ID_array as $value)
+        {
+            $row[$x] = array($ID_array[$x],$transnum_array[$x],$date_array[$x],$productnumber_array[$x],$description_array[$x],$customernumber_array[$x],$saleamount_array[$x],$email_array[$x]);
+            $x++;
+        }
+
+        foreach ($row as $fields)
+        {
+            fputcsv($fp, $fields);
+        }
+        fclose($fp);
+
+        return true;
+    }
+}
 ?>

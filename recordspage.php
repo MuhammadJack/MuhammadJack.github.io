@@ -1,124 +1,123 @@
 <?php
-session_start();
-
+    session_start();
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Records Page</title>
-<style>
-table, th, td {
-  border: 1px solid black;
-}
-</style>
+	<meta charset="utf-8" />
+    <title>Records Page</title>
+    <link rel="stylesheet" href="style/styles.css" />
 </head>
 <body>
-
     <?php
-    
-        
-        if(isset($_SESSION["user_name"]))
+        if(!isset($_SESSION["user_name"]))
         {
-           $username = $_SESSION['user_name'];
-
-            echo "<h1> Welcome $username </h1>";
-           if($_SESSION['admin_check'] == "true")
-            {
-                echo "<button style=\"float: right;\" type=\"button\" onclick=\"location.href='adminpage.php'\">Admin Page</button>";
-            }
-        }
-        else
-        {
-            echo "You are not logged in";
+            echo "<div class='page'>
+                <div class='container'>
+                    <div class='left'>
+                        <img src='/images/medicine.png' alt='logo' />
+                        <div class='login'>PHP-SRePS</div>
+                    </div>
+                    
+                    <div class='right'>
+                        <div class='msg'>Not Logged In Yet</div>
+                        <div class='button-row'><button type=\"button\" onclick=\"location.href='index.php'\" class='button'>Log In</button></div>
+                    </div>
+                </div>
+            </div>";
             exit;
         }
-        
-        
     ?>
     
-    <div style="float: right;">
-     <button type="button" onclick="location.href='logout.php'">Logout</button>
+    <div class="side-bar">
+        <img src="/images/medicine.png" alt="logo" />
+        <div class="side-title">PHP-SRePS</div>
+        <?php
+           $username = $_SESSION['user_name'];
+
+           if($_SESSION['admin_check'] == "true")
+            {
+                echo "<div class='side-msg'>Login as: $username</div>";
+                
+                echo "<div><button type=\"button\" onclick=\"location.href='adminpage.php'\" class='side-btn side-adminbtn'>Admin Page</button></div>";
+            }
+            else
+            {
+                echo "<div class='side-msg'>Guest Login</div>";
+            }
+        ?>
+        <div><button type="button" onclick="location.href='logout.php'" class="side-btn">Log Out</button></div>
     </div>
-
-
-
-
-    <div>
-    <button type="button" onclick="location.href='addrecord.php'">Click Here to add a Record!</button>
-    <form action="search_record_process.php" methord="get">
-        <lable>Enter Record ID here :</lable>
-        <input type="text" name="Record_ID"/>
-
-        <button type="submit" name="search">Search Record!</button>
-        or
-        <button type="submit" name="delete" formaction="delete_record_process.php">Delete Record!</button>
-        or
-       <button type="submit" name="update" formaction="update_record.php">Update Record!</button>
-    </form>
     
+    <div class="main">
+        <div>
+            <div style="text-align: center; margin-bottom: 30px;" >
+                <button type="button" onclick="location.href='addrecord.php'" class="top-btn">Add Record</button>
+                <button type="button" onclick="location.href='sort_month_record.php'" class="top-btn">Monthly Records</button> 
+            </div>
+            
+            <div style="text-align: center; margin-bottom: 30px;" >
+                <form action="search_record_process.php" methord="get">
+                    <label>Enter Record ID</label>
+                    <input type="text" name="Record_ID" class="searchbar" required/>
+            
+                    <button type="submit" name="search" class="top-btn">Search Record</button>
+                    
+                    <button type="submit" name="delete" formaction="delete_record_process.php" class="top-btn">Delete Record</button>
+                    
+                   <button type="submit" name="update" formaction="update_record.php" class="top-btn">Update Record</button>
+                </form>
+            </div>
+        </div>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th>Record ID</th>
+                    <th>Transaction Number</th>
+                    <th>Date</th>
+                    <th>Product ID</th>
+                    <th>Description</th>
+                    <th>Customer Number</th>
+                    <th>Sale Amount</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    require_once 'salesRecordDTO.php';
+                    $recorddto = new recordDTO(null,null,null,null,null,null,null);
+                    $info_holder = $recorddto->displayall();
+            
+                    $ID_array = $info_holder[0];
+                    $transnum_array = $info_holder[1];
+                    $date_array = $info_holder[2];
+                    $productnumber_array = $info_holder[3];
+                    $description_array = $info_holder[4];
+                    $customernumber_array = $info_holder[5];
+                    $saleamount_array = $info_holder[6];
+                    $email_array = $info_holder[7];
+            
+                    $x = 0;
+                    foreach($ID_array as $value)
+                    {
+                        echo "<tr>
+                            <td>{$ID_array[$x]}</td>
+                            <td>{$transnum_array[$x]}</td>
+                            <td>{$date_array[$x]}</td>
+                            <td>{$productnumber_array[$x]}</td>
+                            <td>{$description_array[$x]}</td>
+                            <td>{$customernumber_array[$x]}</td>
+                            <td>{$saleamount_array[$x]}</td>
+                            <td>{$email_array[$x]}</td>
+                        </tr>";
+            
+                        $x++;
+                    }
+                ?>
+            </tbody>
+        </table>
     </div>
-
-
-
-    <table style="width:100%" >
-    <tr>
-        <th>ID_SALESRECORD</th>
-        <th>Trans Action Number</th>
-        <th>Date</th>
-        <th>Product Number</th>
-        <th>Description</th>
-        <th>Customer Number</th>
-        <th>Sale Amount</th>
-        <th>Email</th>
-    </tr>
-    <?php
-        require_once 'salesRecordDTO.php';
-        $recorddto = new recordDTO(null,null,null,null,null,null,null);
-        $info_holder = $recorddto->displayall();
-
-        $ID_array = $info_holder[0];
-        $transnum_array = $info_holder[1];
-        $date_array = $info_holder[2];
-        $productnumber_array = $info_holder[3];
-        $description_array = $info_holder[4];
-        $customernumber_array = $info_holder[5];
-        $saleamount_array = $info_holder[6];
-        $email_array = $info_holder[7];
-        
-
-
-        $x = 0;
-        foreach($ID_array as $value)
-        {
-            echo "<tr>
-
-            <th>{$ID_array[$x]}</th>
-            <th>{$transnum_array[$x]}</th>
-            <th>{$date_array[$x]}</th>
-            <th>{$productnumber_array[$x]}</th>
-            <th>{$description_array[$x]}</th>
-            <th>{$customernumber_array[$x]}</th>
-            <th>{$saleamount_array[$x]}</th>
-            <th>{$email_array[$x]}</th>
-
-            </tr>";
-
-            $x++;
-        }
-    
-
-
-?>
-
-</table>
-
-
-
-
-
-
-
-
 </body>
 </html>
